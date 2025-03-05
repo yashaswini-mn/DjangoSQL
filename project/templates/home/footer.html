@@ -1,0 +1,135 @@
+{% load static %} {% block start %}
+
+<footer class="footer">
+  <a href="#" class="scroll-top">
+    <i class="lni lni-chevron-up"></i>
+  </a>
+  <div class="footer-top">
+    <div class="container">
+      <div class="inner-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-12 mb-2">
+            <div class="footer-logo text-center">
+              <a href="/">
+                <img src="{% static 'images/logo-white.png' %}" alt="Logo" class="mx-2"/>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-12">
+            <div class="footer-newsletter">
+              <h4 class="title mb-4">
+                Subscribe to our Newsletter
+                <span>Get all the latest information, Sales and Offers.</span>
+              </h4>
+              <div class="newsletter-form-head">
+                <form class="newsletter-form">
+                  <input
+                    class="mb-2"
+                    name="email"
+                    placeholder="Email address here..."
+                    type="email"
+                    required=""
+                    value=""
+                    autocomplete="email"
+                  />
+                  <div class="button mb-4">
+                    <button class="btn">
+                      Subscribe<span class="dir-part"></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-medium">
+    <div class="container">
+      <div class="bottom-inner">
+        <div class="row">
+          <div class="col-12">
+            <div class="single-footer f-link">
+              <ul>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                <li><a href="{% url 'shipping-address' %}">Delivery</a></li>
+                <li><a href="{% url 'terms-and-conditions' %}">Terms and Conditions</a></li>
+                <li><a href="{% url 'privacy-policy' %}">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="inner-content">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-12">
+            <div class="payment-gateway">
+              <span>We Accept:</span>
+              <img
+                src="{% static 'images/credit-cards-footer.png' %}"
+                alt="#"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="copyright">
+              <p>
+                Designed and Developed by ❤️
+                <a href="" rel="nofollow" target="_blank">
+                  Varun Uthappa
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <ul class="socila">
+              <li><span>Follow Me On:</span></li>
+              <li>
+                <a
+                  href=""
+                  rel="nofollow"
+                  target="_blank">
+                  <i class="lni lni-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  rel="nofollow"
+                  target="_blank">
+                  <i class="lni lni-github"></i>
+              </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  rel="nofollow"
+                  target="_blank">
+                  <i class="lni lni-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/"
+                  rel="nofollow"
+                  target="_blank">
+                  <i class="lni lni-facebook-filled"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% endblock %}

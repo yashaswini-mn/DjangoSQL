@@ -1,0 +1,71 @@
+{% extends "base/base.html" %} {% load static %} 
+{% block title %}Login{% endblock %}
+{% block start %}
+
+<!-- ============================ COMPONENT LOGIN   ================================= -->
+<section class="section-content padding-bottom">
+  <div class="container-xl d-flex justify-content-center align-items-center mt-5">
+    <div class="row justify-content-center w-100">
+      <div class="col-xl-4">
+        <div class="card mb-4">
+          <div class="card-header" style="text-align: center; font-size: 25px">
+            Sign In
+          </div>
+          <div class="card-body">
+            <form method="POST" action="{% url 'login' %}?next={{ request.GET.next }}">
+              {% csrf_token %} {% include "base/alert.html" %}
+
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  required
+                  placeholder="Username"
+                  name="username"
+                  type="text"
+                  autocomplete="username"
+                />
+              </div>
+              <!-- form-group// -->
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  required
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                />
+              </div>
+              <!-- form-group// -->
+
+              <div class="form-group">
+                <a href="{% url 'password_reset' %}" class="float-right">
+                  Forgot password?
+                </a>
+                <label class="float-left custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked/>
+                  <div class="custom-control-label">Remember</div>
+                </label>
+              </div>
+
+              <!-- form-group// -->
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Login
+                </button>
+              </div>
+
+              <p class="text-center mt-4">
+                Don't have account? <a href="{% url 'register' %}">Sign up</a>
+              </p>
+
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ COMPONENT LOGIN END ================================= -->
+
+{% endblock %}
